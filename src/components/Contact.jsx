@@ -87,8 +87,8 @@ export default function Contact() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-green-800 mb-2">Visit Us</h3>
-            <p className="text-gray-600">123 Garden Lane</p>
-            <p className="text-gray-600">Serenity Valley, CA 98765</p>
+            <p className="text-gray-600">Sagana</p>
+            <p className="text-gray-600">Kirinyaga</p>
           </div>
         </div>
 
