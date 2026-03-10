@@ -36,7 +36,8 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-green-700 mb-3">Get in touch</h4>
           <p className="text-sm text-gray-600 mb-2">hello@oasisgardens.com</p>
-          <p className="text-sm text-gray-600 mb-4">+1 (555) 123-4567</p>
+          <p className="text-sm text-gray-600 mb-4">+254 745 322 345</p>
+          <p className="text-sm text-gray-600 mb-4">+254 734 322 345</p>
           <div className="flex space-x-4">
             {/* Social icons (placeholders) */}
             <a href="#" className="text-green-600 hover:text-green-800 transition-colors">
