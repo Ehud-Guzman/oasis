@@ -1,41 +1,48 @@
 export default function Hero() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center text-center overflow-hidden">
- {/* Background Image with subtle zoom effect */}
-<img
-  src="/images/oasis-hero.jpg"
-  alt="Oasis Gardens"
-  className="absolute inset-0 w-full h-full object-cover transform scale-105 animate-slowZoom"
-/>
+      
+      {/* Background Image with subtle zoom effect */}
+      <img
+        src="/images/oasis-hero.jpg"
+        alt="Oasis Gardens"
+        className="absolute inset-0 w-full h-full object-cover transform scale-105 animate-slowZoom"
+      />
 
-      {/* Gradient Overlay (softer than solid black) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 backdrop-blur-[2px]"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60 backdrop-blur-[2px]"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl px-6 text-white">
-        {/* Small Tagline above main title */}
-        <p className="text-green-300 font-semibold tracking-widest uppercase mb-3 animate-fadeInDown">
+
+        {/* Tagline */}
+        <p className="text-[#ff9935] font-semibold tracking-widest uppercase mb-3 animate-fadeInDown">
           Welcome to
         </p>
 
+        {/* Title */}
         <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg animate-fadeInUp">
-          Oasis Gardens <span className="text-green-300">&</span> Caterers
+          Oasis Gardens <span className="text-[#ff9935]">&</span> Caterers
         </h1>
 
+        {/* Subtitle */}
         <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
           Bar • Grill • Restaurant • Events • Outside Catering
         </p>
 
+        {/* Description */}
         <p className="text-white/80 mb-10 max-w-xl mx-auto text-lg animate-fadeInUp animation-delay-400">
           A serene garden venue where celebrations blossom — perfect for dining,
           gatherings, and unforgettable moments.
         </p>
 
+        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-5 animate-fadeInUp animation-delay-600">
-          {/* Call Button with phone icon */}
+
+          {/* Call Button */}
           <a
             href="tel:0745322345"
-            className="group bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+            className="group bg-[#ff9935] hover:bg-[#e68425] text-white px-8 py-4 rounded-full font-semibold shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,10 +61,10 @@ export default function Hero() {
             Call Now
           </a>
 
-          {/* WhatsApp Button with icon */}
+          {/* WhatsApp Button */}
           <a
             href="https://wa.me/254745322345"
-            className="group bg-white text-green-700 px-8 py-4 rounded-full font-semibold shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+            className="group bg-white text-[#720e04] px-8 py-4 rounded-full font-semibold shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,54 +80,26 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Custom Animations */}
+      {/* Animations */}
       <style jsx>{`
         @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
         @keyframes fadeInDown {
-          from {
-            opacity: 0;
-            transform: translateY(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
         @keyframes slowZoom {
-          from {
-            transform: scale(1);
-          }
-          to {
-            transform: scale(1.1);
-          }
+          from { transform: scale(1); }
+          to { transform: scale(1.1); }
         }
-        .animate-fadeInUp {
-          animation: fadeInUp 1s ease-out forwards;
-        }
-        .animate-fadeInDown {
-          animation: fadeInDown 1s ease-out forwards;
-        }
-        .animate-slowZoom {
-          animation: slowZoom 10s ease-out forwards;
-        }
-        .animation-delay-200 {
-          animation-delay: 0.2s;
-        }
-        .animation-delay-400 {
-          animation-delay: 0.4s;
-        }
-        .animation-delay-600 {
-          animation-delay: 0.6s;
-        }
+        .animate-fadeInUp { animation: fadeInUp 1s ease-out forwards; }
+        .animate-fadeInDown { animation: fadeInDown 1s ease-out forwards; }
+        .animate-slowZoom { animation: slowZoom 10s ease-out forwards; }
+        .animation-delay-200 { animation-delay: 0.2s; }
+        .animation-delay-400 { animation-delay: 0.4s; }
+        .animation-delay-600 { animation-delay: 0.6s; }
       `}</style>
     </section>
   );

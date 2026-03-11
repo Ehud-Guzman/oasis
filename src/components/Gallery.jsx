@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-
-
 const images = [
   {
     src: "/images/gold-plate.jpeg",
@@ -14,21 +11,23 @@ const images = [
     src: "/images/weddingsetup.jpeg",
     alt: "Wedding setup",
   },
-  // Add more images as needed – they will automatically fit the grid
 ];
 
 export default function Gallery() {
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
+
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#720e04] mb-4">
             Gallery
           </h2>
-          <div className="w-24 h-1 bg-green-300 mx-auto rounded-full"></div>
+
+          <div className="w-24 h-1 bg-[#ff9935] mx-auto rounded-full"></div>
+
           <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">
-            A glimpse into the Oasis experience – where every moment is picture‑perfect.
+            A glimpse into the Oasis experience – where every moment is picture-perfect.
           </p>
         </div>
 
@@ -37,9 +36,8 @@ export default function Gallery() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500"
             >
-              {/* Image with zoom effect */}
               <img
                 src={image.src}
                 alt={image.alt}
@@ -47,8 +45,8 @@ export default function Gallery() {
                 loading="lazy"
               />
 
-              {/* Sleek overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-start p-6">
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#720e04]/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                 <span className="text-white font-semibold text-lg tracking-wide">
                   View
                 </span>
@@ -57,7 +55,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Optional note about adding your own images */}
         <p className="text-center text-gray-500 text-sm mt-8">
           More visuals coming soon – we're curating the perfect shots.
         </p>

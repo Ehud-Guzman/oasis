@@ -1,4 +1,4 @@
-// servicesData.js (optional – you can keep inline)
+// servicesData.js (optional – can keep inline)
 const services = [
   {
     name: "Bar",
@@ -29,14 +29,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-white to-green-50">
+    <section className="py-20 px-6 bg-gradient-to-b from-white to-[#ff9935]/10">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#720e04] mb-4">
             Our Services
           </h2>
-          <div className="w-24 h-1 bg-green-300 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-[#ff9935] mx-auto rounded-full"></div>
           <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">
             From intimate dinners to grand celebrations – we offer a complete
             garden experience.
@@ -48,15 +48,15 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center border border-green-100 hover:border-green-200"
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 flex flex-col items-center text-center border border-[#720e04]/20 hover:border-[#ff9935]"
             >
               {/* Icon with circular background */}
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-4xl mb-5 group-hover:bg-green-200 transition-colors duration-300">
+              <div className="w-20 h-20 bg-[#720e04]/10 rounded-full flex items-center justify-center text-4xl mb-5 group-hover:bg-[#ff9935]/20 transition-colors duration-300">
                 {service.icon}
               </div>
 
               {/* Service Name */}
-              <h3 className="text-2xl font-bold text-green-800 mb-3">
+              <h3 className="text-2xl font-bold text-[#720e04] mb-3">
                 {service.name}
               </h3>
 
@@ -68,7 +68,7 @@ export default function Services() {
               {/* Subtle CTA */}
               <a
                 href="#"
-                className="text-green-600 font-semibold hover:text-green-700 inline-flex items-center gap-1 transition-colors"
+                className="text-[#ff9935] font-semibold hover:text-[#720e04] inline-flex items-center gap-1 transition-colors"
               >
                 Learn more
                 <span className="text-lg leading-none">→</span>
@@ -77,7 +77,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Optional extra row – you could add a "View all" button or a note */}
+        {/* Optional extra row */}
         <div className="text-center mt-16">
           <p className="text-gray-500 text-sm">
             Custom packages available for every occasion.
